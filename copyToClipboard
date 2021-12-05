@@ -1,0 +1,26 @@
+
+<table class="wrapped confluenceTable">
+	<colgroup><col><col></colgroup>
+		<tbody>
+			<tr>
+				<td class="confluenceTd">Question</td>
+				<td class="confluenceTd">Answer</td>
+			</tr>
+			<tr>
+				<td class="confluenceTd">Copy to Clipboard</td>
+				<td class="confluenceTd"><p id="q1" hidden>TESTTESTTEST</p><button onclick="copyToClipboard('#q1')">Copy to Clipboard</button></td>
+			</tr>
+		</tbody>
+</table>
+
+
+
+<script language="javascript"> 
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+</script> 
